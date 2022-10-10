@@ -11,3 +11,17 @@
 # АНДРЕЙ ВАЛЕТОВ 5
 # Фредди Меркури 3
 # Анастасия Пономарева 4
+
+list_students=[]
+with open ('task3students.txt', 'r', encoding='utf-8') as file:
+    for line in file:
+        if '5' in line:
+            line = line.upper()             
+        list_students.append(line.replace('\n',''))
+
+
+with open('task3studentsnew.txt', 'w', encoding='utf-8') as file:
+    for line in list_students:
+        file.write(line+'\n')
+
+
